@@ -1,5 +1,5 @@
 const developers = ["348883739738112004"]
-const adminprefix = "!";
+const adminprefix = "-";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
