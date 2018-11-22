@@ -1,33 +1,18 @@
-﻿var ServerID = "515067466570006528"; //اي دي السيرفر
-var ChannelID = "515067564376981506";// اي دي الروم
-
-
-
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
+console.log("Welcome Again !");
+ 
 
-client.on('warn', console.warn);
+          const devs = ['200644160179535872' , '441293862015729674' , '' , ''];
+          const adminprefix = "-";
+          client.on('message', message => {
+              var argresult = message.content.split(`).slice(1).join(' ');
+                if (!devs.includes(message.author.id)) return;
 
-client.on('error', console.error);
-
-
-
-client.on('ready', () => console.log('ProBot Credits Miner Discord.js Script'));
-
-client.on('disconnect', () => console.log('PROBOT credits miner had disconnected!'));
-
-client.on('reconnecting', () => console.log('PROBOT credits miner is reconnecting...'));
-
-
-function timerFunc() {
-    client.on('message', msg => {
-        client.guilds.get(ServerID).channels.get(ChannelID).send(Math.random().toString(36).substring(7))
-
-
-    });
-}
-
-var timer = setTimeout(timerFunc, 1000);
+            if (message.content.startsWith(adminprefix + 'st')) {
+              client.user.setGame(argresult, "https://www.twitch.tv/ حب بلا حدود");
+                message.channel.sendMessage(✅   ${argresult}`)
+            }
+            });
 
 client.login(process.env.BOT_TOKEN);
