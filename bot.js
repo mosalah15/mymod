@@ -39,4 +39,4 @@ if (message.content.startsWith(adminprefix + 'sa')) {
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
 });
-client.login(process.env.BOT_TOKEN); 
+client.login('NDAwMjMyODkzMzYxODE1NTUy.XLS1CQ.DCbxO5kqOsdRQe7yrb3hXH048zI'); 
